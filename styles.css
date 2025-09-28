@@ -1,0 +1,509 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  /* Removido overflow: hidden para permitir scroll natural */
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sección izquierda - Login */
+.login-section {
+  flex: 1;
+  background: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  /* Agregado box-shadow para separar visualmente las secciones */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #374151;
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.bank-logos {
+  margin-bottom: 2rem;
+}
+
+.banco-chile-logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.25rem;
+  /* Mejorado el estilo del logo para ser más fiel al original */
+  font-family: serif;
+}
+
+.bancoedwards-logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #10b981;
+  letter-spacing: 0.1em;
+  /* Ajustado color para coincidir mejor con el original */
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #374151;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  /* Mejorado padding y estilo de inputs */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #ef4444;
+  /* Cambiado color de focus a rojo como en el original */
+}
+
+.password-input {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.error-message {
+  display: block;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}
+
+.login-button {
+  width: 100%;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.2s;
+  /* Aumentado padding para coincidir con el original */
+}
+
+.login-button:hover {
+  background: #1e40af;
+}
+
+.recovery-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.recovery-link a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.help-section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+}
+
+.help-section p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  flex: 1;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #3b82f6;
+}
+
+.help-center p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.help-link {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-size: 0.875rem;
+}
+
+/* Sección derecha - Carrusel */
+.carousel-section {
+  flex: 1.2;
+  position: relative;
+  overflow: hidden;
+  /* Corrigiendo la ruta de la imagen de fondo */
+  background-image: url("public/torres-del-paine.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Agregado overlay para mejorar contraste */
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.slide-card {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  color: white;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.slide-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.slide-text h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.cta-button:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Reposicionando controles para coincidir con la imagen original */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.control-btn {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Corrigiendo posicionamiento del mensaje de seguridad y ubicación */
+.security-message {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 90%;
+  z-index: 10;
+}
+
+.security-message h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.slide-location {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  font-size: 0.875rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 90%;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .login-section {
+    max-width: none;
+    flex: none;
+  }
+
+  .carousel-section {
+    flex: none;
+    height: 60vh;
+    min-height: 500px;
+  }
+
+  .carousel-container {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-section {
+    padding: 1.5rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .carousel-controls {
+    right: 1rem;
+    gap: 0.75rem;
+  }
+
+  .control-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .slide {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .slide-card {
+    max-width: none;
+    padding: 1.5rem;
+  }
+
+  .slide-text h3 {
+    font-size: 1.125rem;
+  }
+
+  .carousel-indicators {
+    bottom: 6rem;
+  }
+
+  .security-message {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-section {
+    padding: 1rem;
+  }
+
+  .carousel-section {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .slide {
+    padding: 1.5rem 0.75rem 0.75rem;
+  }
+
+  .slide-card {
+    padding: 1.25rem;
+  }
+
+  .carousel-controls {
+    right: 0.75rem;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

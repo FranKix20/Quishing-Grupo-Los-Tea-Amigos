@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Chile - Banca en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección izquierda - Formulario de login -->
+        <div class="login-section">
+            <div class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m15 18-6-6 6-6"/>
+                </svg>
+                <span>IR A SITIO PÚBLICO</span>
+            </div>
+            
+            <div class="login-form">
+                <div class="bank-logos">
+                    <div class="banco-chile-logo">Banco de Chile</div>
+                    <div class="bancoedwards-logo">BANCOEDWARDS</div>
+                </div>
+                
+                <h1>Bienvenido a tu Banca en Línea</h1>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="rut">RUT</label>
+                        <input type="text" id="rut" placeholder="">
+                        <span class="error-message" style="display: none;">Debes ingresar tu RUT para ingresar a tu cuenta.</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <div class="password-input">
+                            <input type="password" id="password">
+                            <button type="button" class="toggle-password">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="error-message" style="display: none;">Debes ingresar tu clave para ingresar a tu cuenta.</span>
+                    </div>
+                    
+                    <button type="submit" class="login-button">INGRESAR</button>
+                </form>
+                
+                <div class="recovery-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                    </svg>
+                    <span>¿Problemas con tu clave? <a href="#">Recupérala</a></span>
+                </div>
+                
+                <div class="help-section">
+                    <p>¿Tienes problemas para acceder a tu cuenta?</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Banco de Chile</strong>
+                            <div class="phone">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                600 637 3737
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <strong>Banco Edwards</strong>
+                            <div class="phone">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                600 231 9999
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="help-center">
+                        <p>Te invitamos a nuestro Centro de Ayuda</p>
+                        <a href="#" class="help-link">IR AL CENTRO DE AYUDA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección derecha - Carrusel -->
+        <div class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <!-- Mejorado contenido de slides para ser más fiel al original -->
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <div class="slide-card">
+                                <img src="public/familia-feliz.jpg" alt="Familia feliz" class="slide-image">
+                                <div class="slide-text">
+                                    <h3>Este mes paga tus contribuciones con tus Tarjetas del Chile</h3>
+                                    <button class="cta-button">
+                                        CONOCER MÁS
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="m9 18 6-6-6-6"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-card">
+                                <img src="public/banca-movil.jpg" alt="Banca móvil" class="slide-image">
+                                <div class="slide-text">
+                                    <h3>Descubre todas las funciones de tu Banca Móvil</h3>
+                                    <button class="cta-button">
+                                        CONOCER MÁS
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="m9 18 6-6-6-6"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-card">
+                                <img src="public/inversion.jpg" alt="Planificación financiera" class="slide-image">
+                                <div class="slide-text">
+                                    <h3>Planifica tu futuro con nuestros productos de inversión</h3>
+                                    <button class="cta-button">
+                                        CONOCER MÁS
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="m9 18 6-6-6-6"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="control-btn prev-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m15 18-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="control-btn next-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="control-btn pause-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16"/>
+                            <rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                
+                <div class="security-message">
+                    <h4>No compartas tu información bancaria con nadie</h4>
+                </div>
+                
+                <div class="slide-location">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>Parque Nacional Torres del Paine, Región de Magallanes y Antártica Chilena</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
